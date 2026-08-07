@@ -128,7 +128,7 @@ function render(){
   var _amt=_p?'':`$${money(s.total)}`;
   var _det=_p?`<div class="det" style="padding:10px 14px;color:var(--grn)">Paid in full (not in Awaiting Payment)</div>`:`<div class="det">${inv}</div>`;
   var _copy=_p?'':`<span class="copybtn" title="Copy reminder email" data-site="${escAttr(s.site.replace(/^=/,''))}" data-amt="$${money(s.total)}" data-count="${s.count}" onclick="copyEmail(event,this)">Copy Email</span>`;
-  var _open=_p?'':`<a class="openx" href="${xurl(s.ent,s.site)}" target="_blank" rel="noopener" title="Switch to ${LBL[s.ent]||s.ent} and open filtered Awaiting Payment" onclick="event.stopPropagation()">Open in Xero</a>`;
+  var _open=_p?'':`<a class="openx" href="${xurl(s.ent,s.site)}" target="_blank" rel="noopener" title="Switch entity and open filtered Awaiting Payment in Xero" onclick="event.stopPropagation()">Open in Xero</a>`;
   div.innerHTML=`<div class="head" onclick="this.parentNode.classList.toggle('open')">
    <div class="rank">${i+1}</div>
    ${_badge}
